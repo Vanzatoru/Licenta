@@ -28,7 +28,8 @@ public class CharacterNavigationController : MonoBehaviour
 
     void Update()
     {
-        if(transform.position != destination)
+        
+        if (transform.position != destination)
         {
             Vector3 destinationDirection=destination-transform.position;
             destinationDirection.y = 0;

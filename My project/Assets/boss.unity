@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &10886750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +293,7 @@ MonoBehaviour:
   next: {fileID: 967077766}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &17935108
 Transform:
@@ -389,6 +390,7 @@ MonoBehaviour:
   next: {fileID: 74924947}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &35506853
 Transform:
@@ -438,6 +440,7 @@ MonoBehaviour:
   next: {fileID: 460173671}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &64440540
 Transform:
@@ -502,6 +505,7 @@ MonoBehaviour:
   next: {fileID: 1878249302}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!1 &75397287
 GameObject:
@@ -551,6 +555,7 @@ MonoBehaviour:
   next: {fileID: 1073527156}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!1 &85128784 stripped
 GameObject:
@@ -748,6 +753,7 @@ MonoBehaviour:
   next: {fileID: 2103184559}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &149243490
 Transform:
@@ -784,7 +790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &175600729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,6 +1009,7 @@ MonoBehaviour:
   next: {fileID: 1115294751}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &251937739
 Transform:
@@ -1052,6 +1059,7 @@ MonoBehaviour:
   next: {fileID: 1751391457}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &291188805
 Transform:
@@ -1116,6 +1124,7 @@ MonoBehaviour:
   next: {fileID: 1499682737}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!1 &362580270
 GameObject:
@@ -1224,6 +1233,7 @@ MonoBehaviour:
   next: {fileID: 1208573580}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &406038457
 Transform:
@@ -1273,6 +1283,7 @@ MonoBehaviour:
   next: {fileID: 962162031}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &410793818
 Transform:
@@ -1322,6 +1333,7 @@ MonoBehaviour:
   next: {fileID: 992604698}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &433942790
 Transform:
@@ -1371,6 +1383,7 @@ MonoBehaviour:
   next: {fileID: 700461800}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &446968009
 Transform:
@@ -1420,6 +1433,7 @@ MonoBehaviour:
   next: {fileID: 406038456}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &454751773
 Transform:
@@ -1484,6 +1498,7 @@ MonoBehaviour:
   next: {fileID: 0}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 1596356894}
   width: 1
 --- !u!1 &485278588
 GameObject:
@@ -1511,7 +1526,7 @@ Transform:
   m_GameObject: {fileID: 485278588}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.547, y: 0, z: -0.66}
+  m_LocalPosition: {x: 0.617, y: 0, z: -0.557}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1616,6 +1631,7 @@ MonoBehaviour:
   next: {fileID: 997517270}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &526488701
 Transform:
@@ -1665,6 +1681,7 @@ MonoBehaviour:
   next: {fileID: 623242025}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &595057301
 Transform:
@@ -1747,6 +1764,7 @@ MonoBehaviour:
   next: {fileID: 906514859}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &623242026
 Transform:
@@ -1830,6 +1848,7 @@ MonoBehaviour:
   next: {fileID: 149243489}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &657528150
 Transform:
@@ -1879,6 +1898,7 @@ MonoBehaviour:
   next: {fileID: 595057300}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &669260312
 Transform:
@@ -1928,6 +1948,7 @@ MonoBehaviour:
   next: {fileID: 1504395320}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &672102883
 Transform:
@@ -1977,6 +1998,7 @@ MonoBehaviour:
   next: {fileID: 410793817}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &700461801
 Transform:
@@ -2109,6 +2131,7 @@ MonoBehaviour:
   next: {fileID: 0}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 498871509}
   width: 1
 --- !u!1 &852298409
 GameObject:
@@ -2136,7 +2159,7 @@ Transform:
   m_GameObject: {fileID: 852298409}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.632, y: 0, z: 1.158}
+  m_LocalPosition: {x: 0.632, y: 0, z: 1.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2192,6 +2215,7 @@ MonoBehaviour:
   next: {fileID: 1879999273}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &906514860
 Transform:
@@ -2256,6 +2280,7 @@ MonoBehaviour:
   next: {fileID: 0}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 852298411}
   width: 1
 --- !u!1 &927733998
 GameObject:
@@ -2305,6 +2330,7 @@ MonoBehaviour:
   next: {fileID: 1386146741}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!1 &932238267
 GameObject:
@@ -2339,6 +2365,7 @@ MonoBehaviour:
   next: {fileID: 1389263173}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &932238269
 Transform:
@@ -2388,6 +2415,7 @@ MonoBehaviour:
   next: {fileID: 1003552985}
   branch1: {fileID: 2112305759}
   branch2: {fileID: 927734000}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &962162032
 Transform:
@@ -2437,6 +2465,7 @@ MonoBehaviour:
   next: {fileID: 2076767836}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &967077767
 Transform:
@@ -2486,6 +2515,7 @@ MonoBehaviour:
   next: {fileID: 354872638}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1.28
 --- !u!4 &986371565
 Transform:
@@ -2535,6 +2565,7 @@ MonoBehaviour:
   next: {fileID: 921262394}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &992604699
 Transform:
@@ -2599,6 +2630,7 @@ MonoBehaviour:
   next: {fileID: 0}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!1 &1003552984
 GameObject:
@@ -2633,6 +2665,7 @@ MonoBehaviour:
   next: {fileID: 932238268}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1003552986
 Transform:
@@ -2682,6 +2715,7 @@ MonoBehaviour:
   next: {fileID: 1830313087}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1073527157
 Transform:
@@ -2731,6 +2765,7 @@ MonoBehaviour:
   next: {fileID: 1670232656}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1105261585
 Transform:
@@ -2780,6 +2815,7 @@ MonoBehaviour:
   next: {fileID: 986371564}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1115294752
 Transform:
@@ -2864,6 +2900,7 @@ MonoBehaviour:
   next: {fileID: 1402313282}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1137583015
 Transform:
@@ -2960,6 +2997,7 @@ MonoBehaviour:
   next: {fileID: 927734000}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1155382607
 Transform:
@@ -3058,6 +3096,7 @@ MonoBehaviour:
   next: {fileID: 0}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 485278590}
   width: 1
 --- !u!1 &1209596957
 GameObject:
@@ -3092,6 +3131,7 @@ MonoBehaviour:
   next: {fileID: 1293153463}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1209596959
 Transform:
@@ -3141,6 +3181,7 @@ MonoBehaviour:
   next: {fileID: 75397289}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1293153464
 Transform:
@@ -3190,6 +3231,7 @@ MonoBehaviour:
   next: {fileID: 1003552985}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1386146742
 Transform:
@@ -3239,6 +3281,7 @@ MonoBehaviour:
   next: {fileID: 1586200621}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1389263174
 Transform:
@@ -3288,6 +3331,7 @@ MonoBehaviour:
   next: {fileID: 669260311}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1402313283
 Transform:
@@ -3337,6 +3381,7 @@ MonoBehaviour:
   next: {fileID: 1105261584}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1407720147
 Transform:
@@ -3353,6 +3398,131 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1139682155}
   m_LocalEulerAnglesHint: {x: 0, y: 180.726, z: 0}
+--- !u!1 &1425846553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425846558}
+  - component: {fileID: 1425846557}
+  - component: {fileID: 1425846556}
+  - component: {fileID: 1425846555}
+  - component: {fileID: 1425846554}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1425846554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425846553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5a89c1acffeb84d9369ddf16c69a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  waypoint: {fileID: 454751772}
+  intersectionPoint: {fileID: 0}
+  reachedDestination: 0
+  stopDistance: 0.1
+  rotationSpeed: 1000
+  movementSpeed: 4
+--- !u!65 &1425846555
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425846553}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1425846556
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425846553}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1425846557
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425846553}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1425846558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425846553}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.31, y: 0.33, z: -5.19}
+  m_LocalScale: {x: 0.52271, y: 0.52271, z: 0.52271}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499682736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,6 +3556,7 @@ MonoBehaviour:
   next: {fileID: 1402313282}
   branch1: {fileID: 1762952445}
   branch2: {fileID: 1907670818}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1499682738
 Transform:
@@ -3435,6 +3606,7 @@ MonoBehaviour:
   next: {fileID: 1593285962}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1504395321
 Transform:
@@ -3462,6 +3634,10 @@ PrefabInstance:
     - target: {fileID: 128674, guid: 471247d5cf89b2c46bcde0f08524197e, type: 3}
       propertyPath: m_Name
       value: Character_BusinessMan_Suit_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 128674, guid: 471247d5cf89b2c46bcde0f08524197e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421746, guid: 471247d5cf89b2c46bcde0f08524197e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3627,8 +3803,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577934082}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34946072, y: 0.6139807, z: -0.34869877, w: 0.6158848}
-  m_LocalPosition: {x: -10.351028, y: 22.3157, z: 1.1634825}
+  m_LocalRotation: {x: 0.32393232, y: 0.17793296, z: -0.06301922, w: 0.9270579}
+  m_LocalPosition: {x: -33.246906, y: 8.561005, z: -17.295563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3667,6 +3843,7 @@ MonoBehaviour:
   next: {fileID: 1657655306}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1586200622
 Transform:
@@ -3731,6 +3908,7 @@ MonoBehaviour:
   next: {fileID: 454751772}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!1 &1596356892
 GameObject:
@@ -3814,6 +3992,7 @@ MonoBehaviour:
   next: {fileID: 1990357822}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1657655307
 Transform:
@@ -3850,7 +4029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1668272877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4000,6 +4179,7 @@ MonoBehaviour:
   next: {fileID: 251937738}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1670232657
 Transform:
@@ -4083,6 +4263,7 @@ MonoBehaviour:
   next: {fileID: 446968008}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1751391458
 Transform:
@@ -4132,6 +4313,7 @@ MonoBehaviour:
   next: {fileID: 1155382606}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1762952446
 Transform:
@@ -4287,6 +4469,7 @@ MonoBehaviour:
   next: {fileID: 806044541}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1830313088
 Transform:
@@ -4336,6 +4519,7 @@ MonoBehaviour:
   next: {fileID: 1907670818}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1856345998
 Transform:
@@ -4385,6 +4569,7 @@ MonoBehaviour:
   next: {fileID: 64440539}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1878249303
 Transform:
@@ -4434,6 +4619,7 @@ MonoBehaviour:
   next: {fileID: 2120155503}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1879999274
 Transform:
@@ -4498,6 +4684,7 @@ MonoBehaviour:
   next: {fileID: 1137583014}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!1 &1939347051
 GameObject:
@@ -4566,6 +4753,7 @@ MonoBehaviour:
   next: {fileID: 35506852}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &1984972620
 Transform:
@@ -4615,6 +4803,7 @@ MonoBehaviour:
   next: {fileID: 17935107}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1.28
 --- !u!4 &1990357823
 Transform:
@@ -4665,6 +4854,82 @@ Transform:
   - {fileID: 921262393}
   m_Father: {fileID: 362580271}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2017859054
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 130278, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_Name
+      value: SM_Veh_Car_Van_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 130278, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.37244
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.37244
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.37244
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -30.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487146, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 130278, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2146886946}
+  m_SourcePrefab: {fileID: 100100000, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
 --- !u!1 &2076767834
 GameObject:
   m_ObjectHideFlags: 0
@@ -4713,6 +4978,7 @@ MonoBehaviour:
   next: {fileID: 291188804}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!1001 &2091426603
 PrefabInstance:
@@ -4726,9 +4992,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Veh_Car_Sedan_01
       objectReference: {fileID: 0}
+    - target: {fileID: 198730, guid: 85ac88d7c46e0ea4583870a98cc13580, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 497832, guid: 85ac88d7c46e0ea4583870a98cc13580, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7104187
+      value: -2.87
       objectReference: {fileID: 0}
     - target: {fileID: 497832, guid: 85ac88d7c46e0ea4583870a98cc13580, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4825,6 +5095,7 @@ MonoBehaviour:
   next: {fileID: 433942789}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!1 &2112305758
 GameObject:
@@ -4859,6 +5130,7 @@ MonoBehaviour:
   next: {fileID: 1856345997}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &2112305760
 Transform:
@@ -4908,6 +5180,7 @@ MonoBehaviour:
   next: {fileID: 1407720146}
   branch1: {fileID: 0}
   branch2: {fileID: 0}
+  intersectionpoint: {fileID: 0}
   width: 1
 --- !u!4 &2120155504
 Transform:
@@ -4924,6 +5197,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1139682155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2146886945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 130278, guid: 94469aeaca2d49442af381840b70bb6c, type: 3}
+  m_PrefabInstance: {fileID: 2017859054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2146886946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146886945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5a89c1acffeb84d9369ddf16c69a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  waypoint: {fileID: 454751772}
+  intersectionPoint: {fileID: 0}
+  reachedDestination: 0
+  stopDistance: 1
+  rotationSpeed: 500
+  movementSpeed: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4942,3 +5239,5 @@ SceneRoots:
   - {fileID: 2091426603}
   - {fileID: 362580271}
   - {fileID: 606342001}
+  - {fileID: 2017859054}
+  - {fileID: 1425846558}

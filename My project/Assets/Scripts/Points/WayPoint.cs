@@ -9,6 +9,7 @@ public class WayPoint : MonoBehaviour
     public WayPoint next;
     public WayPoint branch1;
     public WayPoint branch2;
+    public IntersectionPoint intersectionpoint;
     [SerializeField]
     [Range(0f, 5f)]
     public float width = 1f;
