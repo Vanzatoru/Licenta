@@ -18,9 +18,7 @@ public class VehicleNavigator : MonoBehaviour
 
     private void Start()
     {
-         state = random.Next(4);
-       
-        Debug.Log(state);
+        state = random.Next(4);
     }
 
     private void Update()
@@ -34,17 +32,13 @@ public class VehicleNavigator : MonoBehaviour
             SetDestination(waypoint.transform.position);
 
 
-
-
-
         if (transform.position != destination)
         {
             Vector3 destinationDirection = destination - transform.position;
             destinationDirection.y = 0;
             float destinationDistance = destinationDirection.magnitude;
-            if (destinationDistance >= stopDistance)
+            if (destinationDistance >= stopDistance )
             {
-                
                 reachedDestination = false;
                 Quaternion targetRotation = Quaternion.LookRotation(destinationDirection);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -55,7 +49,6 @@ public class VehicleNavigator : MonoBehaviour
                 if (waypoint.intersectionpoint != null)
                 {
                     pas++;
-                    //Debug.Log(pas);
                 }
                 reachedDestination = true;
             }
@@ -70,11 +63,9 @@ public class VehicleNavigator : MonoBehaviour
                             
                             if (pas == 1)
                             {
-                               
                                 SetIntersection(intersectionPoint.Forward);
                                 stopjoc = false;
                                 SetDestination(intersectionPoint.transform.position);
-                               
                             }
                             if (pas == 2)
                             {
@@ -124,15 +115,10 @@ public class VehicleNavigator : MonoBehaviour
                 else
                 {
                     waypoint = waypoint.next;
-                   
                 }
             }
         }
-        
-        
     }
-
-
     public void SetDestination(Vector3 destination)
     {
         this.destination = destination;
@@ -146,6 +132,7 @@ public class VehicleNavigator : MonoBehaviour
     {
         this.intersectionPoint= intersectionPoint;
     }
+    
     
     public void pas2()
     {
