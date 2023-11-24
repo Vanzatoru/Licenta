@@ -7,7 +7,7 @@ using UnityEngine.Animations;
 
 public class CharacterNavigationController : MonoBehaviour
 {
-
+    private Rigidbody rb;
     public Vector3 destination;
     public bool reachedDestination;
     public float stopDistance=1f;
@@ -20,8 +20,9 @@ public class CharacterNavigationController : MonoBehaviour
     private void Start()
     {
         waypointNavigator=GetComponent<WaypointNavigator>();
+        rb=GetComponent<Rigidbody>();
         Directie =random.Next(2);
-        
+        rb.freezeRotation = true;
         Debug.Log(Directie);
     }
 
@@ -40,15 +41,15 @@ public class CharacterNavigationController : MonoBehaviour
                 reachedDestination = false;
                 Quaternion targetRotation=Quaternion.LookRotation( destinationDirection );
                 transform.rotation=Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed* Time.deltaTime );
-                transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
+                //transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
+                rb.MovePosition(transform.position + transform.forward * movementSpeed * Time.deltaTime);
             }
             else
             {
                reachedDestination = true;
-              // Debug.Log("Destinatie atinsa");
-              // Debug.Log(transform.position);
-               
+  
            }
+
 
             if (reachedDestination)
             {
@@ -80,9 +81,15 @@ public class CharacterNavigationController : MonoBehaviour
                 else
                 {
                     if (Directie == 1)
+                    {
                         waypointNavigator.waypoint = waypointNavigator.waypoint.next;
+                        waypointNavigator.randomLR();
+                    }
                     else
+                    {
                         waypointNavigator.waypoint = waypointNavigator.waypoint.previous;
+                        waypointNavigator.randomLR();
+                    }
                 }
                 
             }
@@ -95,3 +102,11 @@ public class CharacterNavigationController : MonoBehaviour
         this.destination = destination;
     }
 }
+/*
+ * velocity = (transform.position - lastPosition)/Time.Delta;
+ * velocity.y=0;
+ * var velocityMagnitude=velocity.magnitude;
+ * velocity = velocity.normalized;
+ * var fwdDotProduct=Vector3.Dot(transform.forward, velocity);
+ * var rightDotProduct=Vector3.Dot(transform.right, velocity);
+ */
