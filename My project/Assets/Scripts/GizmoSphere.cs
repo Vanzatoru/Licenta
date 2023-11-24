@@ -6,10 +6,10 @@ public class GizmoSphere : MonoBehaviour
 {
     public float height = 10f;
     public float radius = 5f;
-    public  bool carAround = false;
+    public  bool carInSight = false;
     private void OnDrawGizmos()
     {
-        if(carAround)
+        if(carInSight)
             Gizmos.color = Color.red;
         else   
             Gizmos.color = Color.green;
@@ -27,14 +27,14 @@ public class GizmoSphere : MonoBehaviour
         {
             if (collider.CompareTag("Car") && collider.gameObject != this.gameObject)
             {
-                Debug.Log("Car nearby");
-                carAround = true;
+               // Debug.Log("Car nearby");
+                carInSight = true;
                 break;
 
             }
             else
             {
-                carAround = false;
+                carInSight = false;
             }
         }
     }

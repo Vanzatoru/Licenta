@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class VehicleNavigator : MonoBehaviour
 {
+    private Rigidbody rb;
+    private GizmoRectangle gizmoRectangle;
+    private GizmoSphere gizmoSphere;
     public Vector3 destination;
     public WayPoint waypoint;
     public IntersectionPoint intersectionPoint;
@@ -18,6 +21,8 @@ public class VehicleNavigator : MonoBehaviour
 
     private void Start()
     {
+        gizmoRectangle=GetComponent<GizmoRectangle>();
+        rb = GetComponent<Rigidbody>();
         state = random.Next(4);
     }
 
@@ -31,90 +36,98 @@ public class VehicleNavigator : MonoBehaviour
         else
             SetDestination(waypoint.transform.position);
 
-
-        if (transform.position != destination)
+        if (gizmoRectangle.carForward && gizmoRectangle.carClose)
         {
-            Vector3 destinationDirection = destination - transform.position;
-            destinationDirection.y = 0;
-            float destinationDistance = destinationDirection.magnitude;
-            if (destinationDistance >= stopDistance )
+
+        }
+        else
+        {
+            if (transform.position != destination)
             {
-                reachedDestination = false;
-                Quaternion targetRotation = Quaternion.LookRotation(destinationDirection);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-                transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
-            }
-            else
-            {
-                if (waypoint.intersectionpoint != null)
+                Vector3 destinationDirection = destination - transform.position;
+                destinationDirection.y = 0;
+                float destinationDistance = destinationDirection.magnitude;
+                if (destinationDistance >= stopDistance)
                 {
-                    pas++;
-                }
-                reachedDestination = true;
-            }
+                    reachedDestination = false;
+                    Quaternion targetRotation = Quaternion.LookRotation(destinationDirection);
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                    // transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
+                    rb.velocity = transform.forward * movementSpeed * Time.deltaTime;
 
-            if (reachedDestination) 
-            { 
-                if (waypoint.intersectionpoint != null)
-                {
-                    switch (state)
-                    {
-                        case 0:
-                            
-                            if (pas == 1)
-                            {
-                                SetIntersection(intersectionPoint.Forward);
-                                stopjoc = false;
-                                SetDestination(intersectionPoint.transform.position);
-                            }
-                            if (pas == 2)
-                            {
-                                pas2();
-                            }
-
-                            break;
-                        case 1:
-                            
-                            if (pas == 1)
-                            {
-                                SetIntersection(intersectionPoint.Left);
-                                stopjoc = false;
-                                SetDestination(intersectionPoint.transform.position);
-                            }
-                            if (pas == 2)
-                            {
-                                pas2();
-                            }
-                            break;
-                        case 2:
-                            
-                            if (pas == 1)
-                            {
-                                
-                                SetIntersection(intersectionPoint.Rotate);
-                                stopjoc = false;
-                                SetDestination(intersectionPoint.transform.position);
-
-                                               
-                            }
-                            if (pas == 2)
-                            {
-
-                                pas2();
-                            }
-                            break;
-                        case 3:
-                            waypoint = intersectionPoint.ExitPoint;
-                            pas = 0;
-                            state = random.Next(4);
-                           // Debug.Log(state);
-                            break;
-                    }
-                  
                 }
                 else
                 {
-                    waypoint = waypoint.next;
+                    if (waypoint.intersectionpoint != null)
+                    {
+                        pas++;
+                    }
+                    reachedDestination = true;
+                }
+
+                if (reachedDestination)
+                {
+                    if (waypoint.intersectionpoint != null)
+                    {
+                        switch (state)
+                        {
+                            case 0:
+
+                                if (pas == 1)
+                                {
+                                    SetIntersection(intersectionPoint.Forward);
+                                    stopjoc = false;
+                                    SetDestination(intersectionPoint.transform.position);
+                                }
+                                if (pas == 2)
+                                {
+                                    pas2();
+                                }
+
+                                break;
+                            case 1:
+
+                                if (pas == 1)
+                                {
+                                    SetIntersection(intersectionPoint.Left);
+                                    stopjoc = false;
+                                    SetDestination(intersectionPoint.transform.position);
+                                }
+                                if (pas == 2)
+                                {
+                                    pas2();
+                                }
+                                break;
+                            case 2:
+
+                                if (pas == 1)
+                                {
+
+                                    SetIntersection(intersectionPoint.Rotate);
+                                    stopjoc = false;
+                                    SetDestination(intersectionPoint.transform.position);
+
+
+                                }
+                                if (pas == 2)
+                                {
+
+                                    pas2();
+                                }
+                                break;
+                            case 3:
+                                waypoint = intersectionPoint.ExitPoint;
+                                pas = 0;
+                                state = random.Next(4);
+                                // Debug.Log(state);
+                                break;
+                        }
+
+                    }
+                    else
+                    {
+                        waypoint = waypoint.next;
+                    }
                 }
             }
         }
