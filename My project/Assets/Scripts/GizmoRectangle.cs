@@ -68,7 +68,6 @@ public class GizmoRectangle : MonoBehaviour
 
         }
 
-        // If no car is found, set carAround to false
         carClose = false;
 
     }

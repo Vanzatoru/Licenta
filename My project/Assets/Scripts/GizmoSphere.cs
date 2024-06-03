@@ -6,43 +6,36 @@ public class GizmoSphere : MonoBehaviour
 {
     public float height = 10f;
     public float radius = 5f;
-    public  bool carInSight = false;
+    public float maxDistance = 1f;
+    public  bool pedestrianInSight = false;
+    
+
+
+    private void Update()
+    {
+        CheckForPedestrians();
+        //CheckForPedestriansForward();
+    }
+
     private void OnDrawGizmos()
     {
-        if(carInSight)
+        if(pedestrianInSight)
             Gizmos.color = Color.red;
         else   
             Gizmos.color = Color.green;
 
-        // Draw the top circle of the cylinder
         DrawCircle(transform.position + Vector3.up * (height / 2f));
 
-        // Draw the bottom circle of the cylinder
         DrawCircle(transform.position - Vector3.up * (height / 2f));
 
-        // Draw the vertical lines connecting the circles to form the cylinder
         Gizmos.DrawLine(transform.position + Vector3.up * (height / 2f), transform.position - Vector3.up * (height / 2f));
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
-        foreach (Collider collider in colliders)
-        {
-            if (collider.CompareTag("Car") && collider.gameObject != this.gameObject)
-            {
-               // Debug.Log("Car nearby");
-                carInSight = true;
-                break;
-
-            }
-            else
-            {
-                carInSight = false;
-            }
-        }
+        CheckForPedestrians();
+       // CheckForPedestriansForward();
     }
 
-    // Helper method to draw a circle in the Gizmos
     private void DrawCircle(Vector3 center)
     {
-        int segments = 32; // Adjust the number of segments for smoother circles
+        int segments = 32; 
         float angleIncrement = 360f / segments;
 
         Vector3 prevPoint = Vector3.zero;
@@ -61,4 +54,27 @@ public class GizmoSphere : MonoBehaviour
             prevPoint = currentPoint;
         }
     }
+    private void CheckForPedestrians()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        foreach (Collider collider in colliders)
+        {
+            if (collider.CompareTag("Pedestrian") && collider.gameObject )
+            {
+                Debug.Log("in sight");
+                CharacterNavigationController characterNavigationController = collider.GetComponent<CharacterNavigationController>();
+                if (characterNavigationController.passing)
+                {
+                    pedestrianInSight = true;
+                }
+                return;
+            }
+            else
+            {
+                pedestrianInSight = false;
+            }
+        }
+    }
+   
+
 }

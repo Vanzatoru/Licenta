@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
         // Player movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-
+        
         Vector3 moveDirection = new Vector3(horizontal, 0f, vertical).normalized;
         Vector3 moveVelocity = moveDirection * moveSpeed;
 
@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
 
         // Camera follow player
         Vector3 targetPosition = transform.position + transform.forward * -5f + transform.up * 2f; // Adjust the position as needed
-
+        
         playerCamera.position = Vector3.Lerp(playerCamera.position, targetPosition, Time.deltaTime * cameraFollowSpeed);
         playerCamera.LookAt(transform.position + transform.up * 2f); // Adjust the look-at position as needed
     }

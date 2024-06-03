@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WayPoint : MonoBehaviour
 {
+    public bool changepoint;
     public WayPoint previous;
     public WayPoint next;
     public WayPoint branch1;

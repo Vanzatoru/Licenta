@@ -13,6 +13,7 @@ public class CharacterNavigationController : MonoBehaviour
     public float stopDistance=1f;
     public float rotationSpeed =1f;
     public float movementSpeed =1f;
+    public bool passing = false;
     private WaypointNavigator waypointNavigator;
     System.Random random=new System.Random();
     double BranchChance = 0;
@@ -23,7 +24,6 @@ public class CharacterNavigationController : MonoBehaviour
         rb=GetComponent<Rigidbody>();
         Directie =random.Next(2);
         rb.freezeRotation = true;
-        Debug.Log(Directie);
     }
 
 
@@ -53,15 +53,21 @@ public class CharacterNavigationController : MonoBehaviour
 
             if (reachedDestination)
             {
-                
+                if (waypointNavigator.waypoint.tag == "Branch")
+                {
+                    passing = true;
+                }
+                else
+                { passing = false; }
+
                 if (waypointNavigator.waypoint.branch1 != null)
                 {
-                    
+                   
                     BranchChance =random.NextDouble();
-                    Debug.Log(BranchChance);
-                    if (BranchChance>=0.5)
+                    if (BranchChance>=0.1)
                     {
-                        Debug.Log("Am intrat pe branch");
+                        //Debug.Log("Am intrat pe branch");
+                        passing =true;
                         if(Directie==1) 
                             waypointNavigator.waypoint = waypointNavigator.waypoint.branch1; 
                         else
@@ -102,11 +108,3 @@ public class CharacterNavigationController : MonoBehaviour
         this.destination = destination;
     }
 }
-/*
- * velocity = (transform.position - lastPosition)/Time.Delta;
- * velocity.y=0;
- * var velocityMagnitude=velocity.magnitude;
- * velocity = velocity.normalized;
- * var fwdDotProduct=Vector3.Dot(transform.forward, velocity);
- * var rightDotProduct=Vector3.Dot(transform.right, velocity);
- */

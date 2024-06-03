@@ -7,7 +7,7 @@ public class IntersectionPoint : MonoBehaviour
 
     public WayPoint EntryPoint;
     public WayPoint ExitPoint;
-    public IntersectionPoint Forward;
+    public WayPoint Forward;
     public IntersectionPoint Left;
     public IntersectionPoint Rotate;
  

@@ -38,9 +38,9 @@ public class WaypointNavigator : MonoBehaviour
         float randomFloat = GetRandomFloat(-waypoint.width/2, waypoint.width/2);
         randomDestination = waypoint.transform.position;
         randomDestination.x = randomDestination.x + randomFloat;
-        Debug.Log(waypoint.transform.position);
-        Debug.Log(randomDestination);
-        Debug.Log(randomFloat);
+      //  Debug.Log(waypoint.transform.position);
+       // Debug.Log(randomDestination);
+       // Debug.Log(randomFloat);
 
     }
     float GetRandomFloat(float minValue, float maxValue)
