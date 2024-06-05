@@ -11,6 +11,12 @@ public class GizmoRectangle : MonoBehaviour
     public bool carClose = false;
     public bool carForward = false;
 
+    private void Awake()
+    {
+        width = 1.7f;
+        length = 6f;
+        maxDistance = 6f;
+    }
     private void Update()
     {
         CheckForNearbyCars();

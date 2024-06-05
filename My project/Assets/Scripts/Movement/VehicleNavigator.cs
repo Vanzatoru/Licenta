@@ -60,7 +60,7 @@ public class VehicleNavigator : MonoBehaviour
 
             
             if(clear)
-                movementSpeed = 1f;
+                movementSpeed = 5f;
             else 
                 movementSpeed = 0f;
         }
@@ -122,32 +122,84 @@ public class VehicleNavigator : MonoBehaviour
                 {//0 fowr 1 left 2 rot 3 right
                     if (waypoint.changepoint) {
                         roadWay = waypoint.GetComponentInParent<RoadWay>();
-                       // SetDirection();
-                        if (state == 2)
-                        {
-                            state = 0;
-                        }
-                            
-                        if(roadWay.cardinals== Cardinals.East)
+                        if (roadWay.cardinals == Cardinals.South)
                         {
                             if (state == 1)
+                                state = 0;
+                            if (state == 2)
                                 state = 3;
+                        }
+                        if(roadWay.cardinals == Cardinals.North)
+                        {
+                            if (state == 1)
+                                state = 0;
+                            if (state == 2)
+                                state = 3;
+                        }
+                        if(roadWay.cardinals==Cardinals.West)
+                        {
+                            if (state == 1)
+                                state = 0;
+                            if (state == 2)
+                                state = 3;
+                        }
+                        if (roadWay.cardinals == Cardinals.East)
+                        {
+                            if (state == 1)
+                                state = 0;
+                            if (state == 2)
+                                state = 3;
+                        }
+                        SetDirection();
+                    }
+                    if (waypoint.changepoint3)
+                    {
+                        roadWay = waypoint.GetComponentInParent<RoadWay>();
+                        if (roadWay.cardinals == Cardinals.South)
+                        {
+                            if (state == 3)
+                                state = 0;
+                            if (state == 2)
+                                state = 1;
+                        }
+                        if (roadWay.cardinals == Cardinals.North)
+                        {
+                            if (state == 3)
+                                state = 0;
+                            if (state == 2)
+                                state = 1;
+                            
+                            
                         }
                         if (roadWay.cardinals == Cardinals.West)
                         {
                             if (state == 3)
                                 state = 0;
+                            if (state == 2)
+                                state = 1;
                         }
-                        if (roadWay.cardinals == Cardinals.South)
+                        if (roadWay.cardinals == Cardinals.East)
                         {
-                            if (state == 0)
-                                state = 3;
+                            if (state == 3)
+                                state = 0;
+                            if (state == 2)
+                                state = 1;
                         }
-                        if (roadWay.cardinals == Cardinals.North)
+                        SetDirection();
+                    }
+                    if (waypoint.changepoint2)
+                    {
+                        roadWay = waypoint.GetComponentInParent<RoadWay>();
+                        if (state == 0)
                         {
-                            if (state == 0)
-                                state = 3;
+                            state = 1;
                         }
+                            
+                        if (state==2)
+                        {
+                            state = 3;
+                        }
+
                         SetDirection();
                     }
 
@@ -174,7 +226,7 @@ public class VehicleNavigator : MonoBehaviour
                         }
                         else
                         {
-                            movementSpeed = 1f;
+                            movementSpeed = 5f;
                             
                             LockPath();
                             switch (state)
@@ -519,7 +571,8 @@ public class VehicleNavigator : MonoBehaviour
         switch (direction)
         {
             case Directions.NorthToNorth:
-                if (CurrentIntersection.WestToWest == false && CurrentIntersection.WestToNorth == false && CurrentIntersection.WestToSouth && CurrentIntersection.WestToEast == false)
+               
+                if (CurrentIntersection.WestToWest == false && CurrentIntersection.WestToNorth == false && CurrentIntersection.WestToSouth == false && CurrentIntersection.WestToEast == false)
                 {
                     clear = true;
                 }
@@ -527,6 +580,7 @@ public class VehicleNavigator : MonoBehaviour
                     clear = false;
                 break;
             case Directions.SouthToSouth:
+                
                 if (CurrentIntersection.EastToEast ==false && CurrentIntersection.EastToNorth == false && CurrentIntersection.EastToWest == false && CurrentIntersection.EastToSouth==false)
                 {
                     clear= true;
@@ -535,7 +589,8 @@ public class VehicleNavigator : MonoBehaviour
                     clear= false;
                 break;
             case Directions.WestToWest:
-                if(CurrentIntersection.SouthToSouth == false && CurrentIntersection.SouthToWest ==false && CurrentIntersection.SouthToNorth == false && CurrentIntersection.SouthToEast==false)
+              
+                if (CurrentIntersection.SouthToSouth == false && CurrentIntersection.SouthToWest ==false && CurrentIntersection.SouthToNorth == false && CurrentIntersection.SouthToEast==false)
                 {
                     clear = true;
                 }
@@ -543,6 +598,7 @@ public class VehicleNavigator : MonoBehaviour
                     clear = false;
                 break;
             case Directions.EastToEast:
+               
                 if (CurrentIntersection.NorthToEast == false && CurrentIntersection.NorthToNorth == false && CurrentIntersection.NorthToSouth == false && CurrentIntersection.NorthToWest == false)
                 {
                     clear = true;
