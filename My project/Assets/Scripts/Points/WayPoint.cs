@@ -15,7 +15,7 @@ public class WayPoint : MonoBehaviour
     public IntersectionPoint intersectionpoint;
     [SerializeField]
     [Range(0f, 5f)]
-    public float width = 1f;
+    public float width = 3.1f;
 
 
 

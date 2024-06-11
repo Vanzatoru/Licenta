@@ -5,12 +5,13 @@ using UnityEngine;
 public class WaypointNavigator : MonoBehaviour
 {
     public WayPoint waypoint;
-    
+    private float randomFloat;
     private CharacterNavigationController characterController;
     private Vector3 randomDestination= new Vector3 (0, 0, 0);
    
     void Start()
     {
+        randomFloat = GetRandomFloat(-waypoint.width / 2, waypoint.width / 2);
         randomLR();
         characterController = GetComponent<CharacterNavigationController>();
         if (characterController == null)
@@ -24,7 +25,7 @@ public class WaypointNavigator : MonoBehaviour
     {
         //characterController.SetDestination(waypoint.transform.position);
         characterController.SetDestination(randomDestination);
-        
+      //  Debug.Log(randomDestination);
     }
 
     public void Setwaypoint(WayPoint waypoint)
@@ -35,12 +36,9 @@ public class WaypointNavigator : MonoBehaviour
     public void randomLR()
     {
         
-        float randomFloat = GetRandomFloat(-waypoint.width/2, waypoint.width/2);
+       // float randomFloat = GetRandomFloat(-waypoint.width/2, waypoint.width/2);
         randomDestination = waypoint.transform.position;
         randomDestination.x = randomDestination.x + randomFloat;
-      //  Debug.Log(waypoint.transform.position);
-       // Debug.Log(randomDestination);
-       // Debug.Log(randomFloat);
 
     }
     float GetRandomFloat(float minValue, float maxValue)

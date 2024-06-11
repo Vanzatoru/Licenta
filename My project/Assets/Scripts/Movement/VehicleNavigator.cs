@@ -17,6 +17,7 @@ public class VehicleNavigator : MonoBehaviour
     public float stopDistance = 1f;
     public float rotationSpeed = 1f;
     public float movementSpeed = 1f;
+    public float speedlimit = 5f;
     System.Random random = new System.Random();
     public int state;
     short pas=0;
@@ -30,12 +31,8 @@ public class VehicleNavigator : MonoBehaviour
     private void Awake()
     {
         state = random.Next(4);
-       // Debug.Log(state);
         roadWay = waypoint.GetComponentInParent<RoadWay>();
-       // Debug.Log(roadWay.cardinals);
         SetDirection();
-       // Debug.Log(direction);
-        
     }
 
     private void Start()
@@ -57,12 +54,35 @@ public class VehicleNavigator : MonoBehaviour
             CurrentIntersection = waypoint.intersectionpoint.GetComponentInParent<IntersectionNode>();
             if (stopjoc) { intersectionPoint = waypoint.intersectionpoint; };
             SetDestination(intersectionPoint.transform.position);
-
+            if (CurrentIntersection.TrafficLights) 
+            {
+                switch (roadWay.cardinals)
+                {
+                    case Cardinals.South:
+                        if (CurrentIntersection.SouthLight==false && in_intersection==false)
+                            return;
+                        break;
+                    case Cardinals.West:
+                        if (CurrentIntersection.WestLight==false && in_intersection == false)
+                            return;
+                        break;
+                    case Cardinals.North:
+                        if (CurrentIntersection.NorthLight==false && in_intersection == false)
+                            return;
+                        break;
+                    case Cardinals.East:
+                        if (CurrentIntersection.EastLight==false && in_intersection == false)
+                            return;
+                        break;
+                }
+            }
+           
             
             if(clear)
-                movementSpeed = 5f;
+                //movementSpeed = 5f;
+                Accelerate();
             else 
-                movementSpeed = 0f;
+                Decelerate();
         }
         else
         {
@@ -70,12 +90,13 @@ public class VehicleNavigator : MonoBehaviour
             
         }
         
-        if (gizmoRectangle.carForward && gizmoRectangle.carClose)
+        if ((gizmoRectangle.carForward && gizmoRectangle.carClose) || gizmoSphere.pedestrianInSight)
         {
-
+            Decelerate();
         }
         else
         {
+            Accelerate();
             if (transform.position != destination)
             {
                 Vector3 destinationDirection = destination - transform.position;
@@ -116,6 +137,12 @@ public class VehicleNavigator : MonoBehaviour
                             break;
                         default: break;
                     }
+                    if (gizmoSphere.carBlockingPath)
+                    {
+                        Decelerate();
+                        return;
+                    }
+
                 }
 
                 if (reachedDestination)
@@ -222,11 +249,13 @@ public class VehicleNavigator : MonoBehaviour
 
                         if (clear == false)
                         {
-                            movementSpeed = 0f;
+                            // movementSpeed = 0f;
+                            Accelerate();
                         }
                         else
                         {
-                            movementSpeed = 5f;
+                           // movementSpeed = 5f;
+                           Decelerate();
                             
                             LockPath();
                             switch (state)
@@ -646,13 +675,43 @@ public class VehicleNavigator : MonoBehaviour
                 break;
         }
     }
-    /*
-    private float Accelerate(int speedlimit)
+    
+    private void CheckForPath()
     {
-        float ret;
-        
+        switch (direction)
+        {
+            case Directions.NorthToEast:
 
-        return ret;
+                break;
+            case Directions.SouthToWest:
+
+                break;
+            case Directions.WestToNorth:
+
+                break;
+            case Directions.EastToSouth :
+
+                break;
+        }
     }
-    */
+
+
+    private void Accelerate()
+    {
+        if (movementSpeed < speedlimit)
+        {
+            movementSpeed = movementSpeed + 0.02f;
+        }
+    }
+
+    private void Decelerate()
+    {
+        if (movementSpeed > 1)
+        {
+            movementSpeed = movementSpeed - 1f;
+        }
+        if(movementSpeed==1 || movementSpeed<1)
+            movementSpeed=0;
+    }
+
 }

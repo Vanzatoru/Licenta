@@ -64,7 +64,7 @@ public class CharacterNavigationController : MonoBehaviour
                 {
                    
                     BranchChance =random.NextDouble();
-                    if (BranchChance>=0.1)
+                    if (BranchChance>=0.7)
                     {
                         //Debug.Log("Am intrat pe branch");
                         passing =true;

@@ -14,8 +14,8 @@ public class GizmoRectangle : MonoBehaviour
     private void Awake()
     {
         width = 1.7f;
-        length = 6f;
-        maxDistance = 6f;
+        length = 7f;
+        maxDistance = 9f;
     }
     private void Update()
     {
