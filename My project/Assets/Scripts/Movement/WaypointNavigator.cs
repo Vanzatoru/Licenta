@@ -18,25 +18,15 @@ public class WaypointNavigator : MonoBehaviour
         {
             Debug.LogError("CharacterNavigationController component not found on the GameObject.");
         }
-        
     }
 
     void Update()
     {
-        //characterController.SetDestination(waypoint.transform.position);
         characterController.SetDestination(randomDestination);
-      //  Debug.Log(randomDestination);
-    }
-
-    public void Setwaypoint(WayPoint waypoint)
-    {
-        this.waypoint = waypoint;
     }
 
     public void randomLR()
     {
-        
-       // float randomFloat = GetRandomFloat(-waypoint.width/2, waypoint.width/2);
         randomDestination = waypoint.transform.position;
         randomDestination.x = randomDestination.x + randomFloat;
 

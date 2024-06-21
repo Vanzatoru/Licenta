@@ -41,7 +41,6 @@ public class VehicleNavigator : MonoBehaviour
         gizmoRectangle =GetComponent<GizmoRectangle>();
         gizmoSphere = GetComponent<GizmoSphere>();
         rb = GetComponent<Rigidbody>();
-        
     }
 
     private void Update()
@@ -236,9 +235,9 @@ public class VehicleNavigator : MonoBehaviour
                         in_intersection = false;
                         UnlockPath();
                         roadWay = waypoint.GetComponentInParent<RoadWay>();
-                        SetDirection();
                         state = random.Next(4);
-
+                        SetDirection();
+                        
                     }
 
                     
@@ -249,12 +248,10 @@ public class VehicleNavigator : MonoBehaviour
 
                         if (clear == false)
                         {
-                            // movementSpeed = 0f;
                             Accelerate();
                         }
                         else
                         {
-                           // movementSpeed = 5f;
                            Decelerate();
                             
                             LockPath();
@@ -675,25 +672,7 @@ public class VehicleNavigator : MonoBehaviour
                 break;
         }
     }
-    
-    private void CheckForPath()
-    {
-        switch (direction)
-        {
-            case Directions.NorthToEast:
-
-                break;
-            case Directions.SouthToWest:
-
-                break;
-            case Directions.WestToNorth:
-
-                break;
-            case Directions.EastToSouth :
-
-                break;
-        }
-    }
+  
 
 
     private void Accelerate()

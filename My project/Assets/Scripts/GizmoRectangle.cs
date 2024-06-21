@@ -61,39 +61,28 @@ public class GizmoRectangle : MonoBehaviour
     private void CheckForNearbyCars()
     {
         Collider[] colliders = Physics.OverlapBox(transform.position, new Vector3(width / 2f, height, length / 2f), transform.rotation);
-
         foreach (Collider collider in colliders)
         {
             if (collider.CompareTag("Car") && collider.gameObject != this.gameObject)
             {
                 carClose = true;
-                // Debug.Log("Merge boss");
-
-                return; // If at least one car is found, set carAround to true and exit the loop
+                return;
             }
-
         }
-
         carClose = false;
-
     }
 
     private void CheckForCarsForward()
     {
         GameObject[] cars = GameObject.FindGameObjectsWithTag("Car");
-
         foreach (GameObject car in cars)
         {
-            // Get the vector from your object to the car
             Vector3 toCar = car.transform.position - transform.position;
-
-            // Check if the car is within the maximum distance and in front of your object
             if (toCar.sqrMagnitude <= maxDistance * maxDistance && Vector3.Dot(transform.forward, toCar.normalized) > 0f)
             {
                 carForward = true;
                 return;
             }
-           
         }
         carForward = false;
     }

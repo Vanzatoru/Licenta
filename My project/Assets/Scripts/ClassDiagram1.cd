@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CharacterNavigationController">
+    <Position X="13.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAEAgAAAiAAAEACAAAIAARABABAQAA=</HashCode>
+      <FileName>Assets\Scripts\Movement\Character Navigation Controller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="waypointNavigator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VehicleNavigator">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ZEQAAAICAKAAJAEEADkABCAKCAIAAAAMAATABABwQEA=</HashCode>
+      <FileName>Assets\Scripts\Movement\VehicleNavigator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="gizmoRectangle" />
+      <Field Name="gizmoSphere" />
+      <Field Name="waypoint" />
+      <Field Name="intersectionPoint" />
+      <Field Name="CurrentIntersection" />
+      <Field Name="direction" />
+      <Field Name="roadWay" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WaypointNavigator">
+    <Position X="13" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAKAAAAAAAAAAAAAAAAIAAAAAAAAAABIgAAA=</HashCode>
+      <FileName>Assets\Scripts\Movement\WaypointNavigator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="waypoint" />
+      <Field Name="characterController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="IntersectionPoint">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACBABAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Points\IntersectionPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WayPoint">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAIAAAAAAAQAIAABIAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Points\WayPoint.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="branch1" />
+      <Field Name="branch2" />
+      <Field Name="intersectionpoint" />
+      <Field Name="next" />
+      <Field Name="previous" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="IntersectionNode" Collapsed="true">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQQAIAUAAAEAAAiAQEAABAAFAAQEgAAgAACgCAAAgAU=</HashCode>
+      <FileName>Assets\Scripts\road\IntersectionNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadWay">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\road\RoadWay.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="cardinals" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GizmoRectangle">
+    <Position X="8.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAQAAAAQgAAQAQEAAAAACAAAAAAAAAAAAQAAgAEA=</HashCode>
+      <FileName>Assets\Scripts\GizmoRectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GizmoSphere">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAQAECCAAAAQAAAAAAAAAAAAAABAAAAAAAQgCAIA=</HashCode>
+      <FileName>Assets\Scripts\GizmoSphere.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="thisCar" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Utilities.Cardinals">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Assets\Scripts\utilities\Utilities.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Utilities.Directions" Collapsed="true">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAIAUAAAEAAACAQAAABAAAAAQEgAAgAAAACAAAgAQ=</HashCode>
+      <FileName>Assets\Scripts\utilities\Utilities.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
